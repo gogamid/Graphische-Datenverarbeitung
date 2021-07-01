@@ -1,5 +1,3 @@
-# Python3 program to implement
-# Window to ViewPort Transformation
 #python3 window_to_viewport.py
 
 # Function for window to viewport transformation
@@ -19,27 +17,20 @@ def WindowtoViewport(x_w, y_w,
 	print("The point on viewport:(", int(x_v),
 								",", int(y_v), ")")
 
+
+def transform(n,a,b,c,d):
+    res=(((n-a)/(b-a))*(d-c))+c
+    print(res)
 # Driver Code
 if __name__ == '__main__':
-	
-	# boundary values for window
-	x_wmax = 80
-	y_wmax = 80
-	x_wmin = 20
-	y_wmin = 40
-
-	# boundary values for viewport
-	x_vmax = 60
-	y_vmax = 60
-	x_vmin = 30
-	y_vmin = 40
-
-	# point on window
-	x_w = 30
-	y_w = 80
 
     #(x_w, y_w,
     # x_wmax, y_wmax, x_wmin, y_wmin,
     # x_vmax, y_vmax, x_vmin, y_vmin)
-	WindowtoViewport(3, -1,10, 4, -2,-4 , 640, 440, 40, 40)
+    
+	# WindowtoViewport(3, -1,10, 4, -2,-4 , 640, 440, 40, 40)
+    
+    for n in [0.2,0.4,-0.8]:
+        transform(n,-1,1,0,1)
+    
 	
